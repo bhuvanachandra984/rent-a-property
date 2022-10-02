@@ -6,8 +6,8 @@ import Card from '../Card/Card';
 import CustomFilterSummary from './CustomFilterSummary';
 function CustomFilter (props){
 
-const [userData,setUserData] = useState([]);
-const [searchUserData,setSearchUserData] = useState([]);
+const [homeData,setHomeData] = useState([]);
+const [searchHomeData,setSearchHomeData] = useState([]);
 const [title,setTitle]=useState('');
 const [amount,setAmount]=useState('');
 const [type,setType]=useState('');
@@ -16,16 +16,16 @@ const [date,setDate]=useState('');
     useEffect(()=>(
         // eslint-disable-next-line
         CardData,
-        setUserData(CardData),
-        setSearchUserData(CardData)
+        setHomeData(CardData),
+        setSearchHomeData(CardData)
     ),[])
 
     const searchSubmitted =(event)=>{
         event.preventDefault();
         const newData=
-        userData.filter(val=> val.title ===(title ==='' ? val.title : title)) 
+        homeData.filter(val=> val.title ===(title ==='' ? val.title : title)) 
         .filter(val=> val.type ===(type ==='' ? val.type : type));
-        setSearchUserData(newData);
+        setSearchHomeData(newData);
         setTitle('');
         setAmount('');
         setType('');
@@ -74,7 +74,7 @@ const [date,setDate]=useState('');
        <span> <button className={classes.button}>Search</button></span>
         </div>
         </form>
-        <div><Card details={searchUserData}/>
+        <div><Card details={searchHomeData}/>
 </div>
 </div>
 );
