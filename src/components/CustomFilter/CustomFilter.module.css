@@ -1,0 +1,33 @@
+
+ .search {
+    text-align: center;
+    max-width: 40rem;
+    width: 10%;
+    margin: auto;
+    margin-top: 6rem;
+    margin-left: 1rem;
+    position: relative;
+    background-color: white;
+    color: rgb(5, 0, 0);
+    border-radius: 14px;
+    padding: 1rem;
+  
+    }
+  
+    .button{
+      cursor: pointer;
+      font: inherit;
+      border: none;
+      background-color: #3d2fd0;
+      color: rgb(244, 244, 248);
+      padding: 0.75rem 3rem;
+      align-items: center;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+  
+  
+    .button:hover,
+    .button:active {
+      background-color: #27a440;
+    }
